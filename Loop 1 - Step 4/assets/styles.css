@@ -63,9 +63,16 @@ header img {
     line-height: 0;
     font-weight: 500;
 }
+
 .time_block_indicator span {
     background-color: white;
     padding: 4px;
+}
+
+.chat_history {
+    list-style: none;
+    padding: 0 0;
+    margin: 0 0;
 }
 
 .time_submitted {
@@ -82,5 +89,4 @@ header img {
 
 .single_chat_bubble_wrapper.right, .status_bubble {
     margin-left: auto;
-    float: right;
 }
