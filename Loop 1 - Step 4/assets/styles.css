@@ -22,6 +22,7 @@ p, .time_submitted, .time_block_indicator {
     width: 350px;
     margin: auto;
     background-color: #fff;
+    position: relative;
 }
 
 header {
@@ -73,7 +74,11 @@ header img {
     list-style: none;
     padding: 0 0;
     margin: 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
+
 
 .time_submitted {
     color: #ccc;
@@ -87,6 +92,33 @@ header img {
     border-radius: 3px;
 }
 
-.single_chat_bubble_wrapper.right, .status_bubble {
-    margin-left: auto;
+.single_chat_bubble_wrapper.right *, .status_bubble {
+    float: right;
+    clear: both;
+}
+
+.chat_text_input {
+    display: flex;
+    flex-flow: row;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: violet;
+}
+
+.chat_text_input_label {
+    width: 100%;
+}
+
+.chat_text_input input {
+    height: 30px;
+    padding: 2px;
+    width: 75%;
+}
+
+.chat_text_input_submit {
+    width: 25%;
+    height: 30px;
+    float: right;
 }
