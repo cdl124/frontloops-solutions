@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 1 - Step 2</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <div class="box">
+
+    <div class="box__head">
+      <div class="progress__dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="box__header">
+        Payment Method
+      </div>
+    </div>
+    
+    <div class="option visa unselected">
+      <a href="#">
+        <img src="img/visa.svg" />
+        <span> Visa </span>
+        <img class="check" src="img/check.svg" />
+      </a>
+    </div>
+
+    <div class="option mastercard unselected">
+      <a href="#">
+        <img src="img/mastercard.svg" />
+        <span> Mastercard </span>
+        <img class="check" src="img/check.svg" />    
+       </a>
+    </div>
+
+    <div class="option maestro unselected">
+      <a href="#">
+        <img src="img/maestro.svg" />
+        <span> Maestro </span>
+        <img class="check" src="img/check.svg" />
+      </a>
+    </div>
+
+    <div class="next_step">
+      <a href="#">
+        <span>Next Step</span>
+        <img src="img/arrow.svg" />
+      </a>
+    </div>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+  var els = document.querySelectorAll( ".visa, .mastercard, .maestro" );
+
+  for  (var i=0; i<els.length; i++ ) {
+    els[i].addEventListener( "click", function() {
+      if ( this.classList.contains( 'unselected' ) ) {
+        this.classList.remove( 'unselected' );
+        this.classList.add( 'selected' );
+        var that = this;
+        for ( var j=0; j<els.length; j++ ) {
+          if ( els[j] === that ) {
+            continue;
+          } else {
+            if ( els[j].classList.contains( 'selected' ) ) {
+              els[j].classList.remove( 'selected' );
+              els[j].classList.add( 'unselected' );
+            }
+          }
+        }
+      }
+    })
+  }
+</script>
+</html>

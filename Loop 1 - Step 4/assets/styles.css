@@ -1,0 +1,86 @@
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(white, steelblue);
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+h1, .time_block_indicator, button {
+    text-transform: uppercase;
+}
+
+p, .time_submitted, .time_block_indicator {
+    font-size: 0.7em;
+}
+
+.chat_modal {
+    height: 450px;
+    width: 350px;
+    margin: auto;
+    background-color: #fff;
+}
+
+header {
+    background-color: steelblue;
+    color: white;
+    height: 4em;
+    display: flex;
+    align-items: center;
+}
+
+header .status_dot {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    margin: 0.8em;
+    background-color: white;
+}
+
+header h1 {
+    flex: 1;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+header img {
+    margin: 0.8em;
+}
+
+.chat_window {
+    padding: 1em;
+}
+
+.time_block_indicator {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+    line-height: 0;
+    font-weight: 500;
+}
+.time_block_indicator span {
+    background-color: white;
+    padding: 4px;
+}
+
+.time_submitted {
+    color: #ccc;
+}
+
+.chat_bubble, .status_bubble {
+    display: inline-block;
+    background-color: gainsboro;
+    max-width: 75%;
+    padding: 3px 0.5em;
+    border-radius: 3px;
+}
+
+.single_chat_bubble_wrapper.right, .status_bubble {
+    margin-left: auto;
+    float: right;
+}
