@@ -3,7 +3,7 @@ html * {
 }
 
 body {
-    background-image: linear-gradient(white, steelblue);
+    background-image: linear-gradient(white, #6a96d8);
     height: 100vh;
     font-family: 'Roboto', sans-serif;
     width: 100%;
@@ -26,7 +26,7 @@ p, .time_submitted, .time_block_indicator {
 }
 
 header {
-    background-color: steelblue;
+    background-color: #6a96d8;
     color: white;
     height: 4em;
     display: flex;
@@ -47,8 +47,13 @@ header h1 {
     font-weight: 500;
 }
 
-header img {
+header .X {
     margin: 0.8em;
+    color: #e3ebf4;
+}
+
+.header img:hover {
+    opacity: 0.7;
 }
 
 .chat_window {
@@ -58,6 +63,7 @@ header img {
 .time_block_indicator {
     width: 100%;
     margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
     color: #ccc;
     border-bottom: 1px solid #ccc;
@@ -84,17 +90,43 @@ header img {
     color: #ccc;
 }
 
+.chat_bubble {   
+    background-color: #f2f2f2;
+}
+
 .chat_bubble, .status_bubble {
+    position: relative;
     display: inline-block;
-    background-color: gainsboro;
     max-width: 75%;
     padding: 3px 0.5em;
     border-radius: 3px;
 }
 
+.left > .chat_bubble {
+    background-color: #e3ebf4;
+}
+
+.left > .chat_bubble::after {
+    position: absolute;
+    z-index: 1;
+    width: 7px;
+    height: 40px;
+    
+    top: 0px;
+    left: -4px;
+    
+    border-top: 6px solid #e3ebf4;
+    border-left: 4px solid transparent;
+    content: '';
+}
+
 .single_chat_bubble_wrapper.right *, .status_bubble {
     float: right;
     clear: both;
+}
+
+.status_bubble {
+    background-color: #ffc2c1;
 }
 
 .chat_text_input {
@@ -104,7 +136,15 @@ header img {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: violet;
+}
+
+.chat_text_input::before { 
+    position: absolute;
+    border-top: 1px solid #ccc;
+    height: 0px;
+    width: 90%;
+    margin-left: 5%;
+    content: '';
 }
 
 .chat_text_input_label {
@@ -112,13 +152,21 @@ header img {
 }
 
 .chat_text_input input {
-    height: 30px;
-    padding: 2px;
+    height: 40px;
+    padding: 1em 1.2em;
     width: 75%;
+    border: none;
+    font-size: 0.7em;
 }
 
 .chat_text_input_submit {
     width: 25%;
-    height: 30px;
+    height: 40px;
+    color: #6a96d8;
+    font-weight: 700;
     float: right;
+    background-color: white;
+    border: 0px;
+    cursor: pointer;
+    font-size: 0.7em;
 }
