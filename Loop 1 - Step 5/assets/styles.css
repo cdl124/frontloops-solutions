@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-image: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Prompt', sans-serif;
+    font-size: 3em;
+    color: steelblue;
+}
+h2, h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1em;
+    
+}
+
+article.ticket-container {
+    display: inline-block;
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    padding: 1em;
+}
+
+header.from-to-container {
+    justify-content: center;
+}
+
+.from-to-container, 
+.flight-date-seat-row,
+.lower-half-container {
+    display: flex;
+    flex-direction: row;
+}
+.hyphen {
+    margin: 3em 2em;
+    width: 30px;
+    height: 3px;
+    z-index: 100;
+    background-color: grey;
+}
+
+
+.qr-code {
+    width: 150px;
+    margin: auto;
+}
