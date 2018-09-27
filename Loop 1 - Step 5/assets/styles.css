@@ -15,23 +15,33 @@ h1 {
     font-size: 3em;
     color: steelblue;
 }
+
 h2, h3 {
     text-transform: uppercase;
     font-weight: 300;
-    font-size: 1em;
+    font-size: 0.75em;
+    color: #999;
     
 }
 
 article.ticket-container {
-    display: inline-block;
     background-color: white;
-    width: 400px;
-    margin: auto;
-    padding: 1em;
+    width: 350px;
+    margin: 15vh auto auto;
+    padding: 1.2em 2.2em;
 }
 
 header.from-to-container {
-    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: 2.5em;
+}
+
+header.from-to-container h2 {
+    line-height: 0;
+}
+
+.to-container .city-name {
+    text-align: right;
 }
 
 .from-to-container, 
@@ -40,16 +50,25 @@ header.from-to-container {
     display: flex;
     flex-direction: row;
 }
-.hyphen {
-    margin: 3em 2em;
-    width: 30px;
-    height: 3px;
-    z-index: 100;
-    background-color: grey;
+
+.flight-date-seat-row div,
+.pax-class-departure-column div {
+    margin-bottom: 1.5em;
 }
 
+.flight-date-seat-row div {
+    margin-right: 4em;
+}
+
+.hyphen {
+    margin: 2.5em 2em;
+    width: 25px;
+    height: 4px;
+    z-index: 100;
+    background-color: #ddd;
+}
 
 .qr-code {
-    width: 150px;
-    margin: auto;
+    width: 130px;
+    margin-left: auto;
 }
