@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 300;
+}
+
+h2 {
+    color: #999;
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+p {
+    color: #999;
+}
+
+main {
+    position: relative;
+    width: 65%;
+    height: 100vh;
+    background-color: white;
+    z-index: 100;
+}
+
+ul li {
+    list-style: none;
+}
+
+main img {
+    width: 30px;
+}
+
+header, section, .email {
+    padding: 2em;
+}
+
+section ul a {
+    display: flex;
+}
+
+section .signup h2 {
+    align-self: center;
+    margin: auto;
+}
+
+section a,
+.email a {
+    text-decoration: none;
+}
+
+section a {
+    padding: 1em 2em;
+}
+
+.email a {
+    padding: 0em;
+}
+
+section .signup {
+    width: 100%;
+    margin-bottom: 1em;
+    border: 1px solid #eee;
+    justify-content: space-between;
+}
+
+.email a {
+    color: #111;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.email div {
+    font-size: 0.75em;
+}
+
+.side_image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
